@@ -48,45 +48,45 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
 	(0, uint256("0x000000da0be423abd192d2f261afbedec2c81f4e11ecc04803c730c30b305c27"))
-	(2, uint256("0x00000310d966793ec3dd080a97b10afa0c848432c01b4053d2c6f206e1449e28"))
-	(1479, uint256("0x00000000071b53f74e2f55ffa657cf1fc39807fb584e797ed0c6b22a4527d51c"))
-	(5000, uint256("0x0000000002afc607345f345261bf9713c7a9cf8d50191cb338250bd4be0090b5"))
-	(10000, uint256("0x000000000a43a6d2b09f1dbf4ea454b639838fb43686158e131d8b7a36777ca6"))
-	(20000, uint256("0x0000000000e1a4f0659738de768c662164a20f11ca16c77dde422ee2d7369a80"))
-	(30000, uint256("0x00000000040ac4aa7fda2d6fdd2745c788469b482eec8da79842e88bbbfc70c3"))
-	(40000, uint256("0x0000000003265c4aded591f0b648b626abf0e4316295b6baeeadbb6c744f768e"))
-	(50000, uint256("0x00000000052c4943642d41377f0968650871a5351c896a4cfe74e41edd2adf28"))
-	(60000, uint256("0x00000000016a565d7d8b0c96138a9d6873510fece3beffd5295ea517ce4e6b8d"))
-	(70000, uint256("0x00000000039673e6ee9944479068800c78f479dfb6b5d23d748d542af073440d"))
-	(80000, uint256("0x0000000008dacfe17e44c93490c36c4d365fb6309f614c05bfa9952e9c08765f"))
-	(89319, uint256("0x00000000031005c122f47eef1495a44221632fc7cc94b6b5ff68bc7da826c012"))	
-	(95771, uint256("0x00000000021cef5896d94a2d87d928d8fdf943a8d260386471e06b03c635acc6"))
-	(104581, uint256("0x0000000001040e54fab7cb94317cade9461c6500c77a492ba1afd4d04949861b"))
-	(127770, uint256("0x000000000053c7733ed070490012321680e21557bb309ebc0e52265326ffbd0d"))
-	(130116, uint256("0x000000000059038c0121e8c503ba86ca6233b25f0ab1c4836be94d5e1bc79db9"))
-	(152989, uint256("0x0000000000a34969026f2d3e05aa2e8464581107530d8c40ea353dc4244d3161"))
-	(212169, uint256("0x00000000005f7efd88cc09dd9de600150868a75e27a4cb363801e79e5dda4d6d"));
+	//(2, uint256("0x00000310d966793ec3dd080a97b10afa0c848432c01b4053d2c6f206e1449e28"))
+	//(1479, uint256("0x00000000071b53f74e2f55ffa657cf1fc39807fb584e797ed0c6b22a4527d51c"))
+	//(5000, uint256("0x0000000002afc607345f345261bf9713c7a9cf8d50191cb338250bd4be0090b5"))
+	//(10000, uint256("0x000000000a43a6d2b09f1dbf4ea454b639838fb43686158e131d8b7a36777ca6"))
+	//(20000, uint256("0x0000000000e1a4f0659738de768c662164a20f11ca16c77dde422ee2d7369a80"))
+	//(30000, uint256("0x00000000040ac4aa7fda2d6fdd2745c788469b482eec8da79842e88bbbfc70c3"))
+	//(40000, uint256("0x0000000003265c4aded591f0b648b626abf0e4316295b6baeeadbb6c744f768e"))
+	//(50000, uint256("0x00000000052c4943642d41377f0968650871a5351c896a4cfe74e41edd2adf28"))
+	//(60000, uint256("0x00000000016a565d7d8b0c96138a9d6873510fece3beffd5295ea517ce4e6b8d"))
+	//(70000, uint256("0x00000000039673e6ee9944479068800c78f479dfb6b5d23d748d542af073440d"))
+	//(80000, uint256("0x0000000008dacfe17e44c93490c36c4d365fb6309f614c05bfa9952e9c08765f"))
+	//(89319, uint256("0x00000000031005c122f47eef1495a44221632fc7cc94b6b5ff68bc7da826c012"))	
+	//(95771, uint256("0x00000000021cef5896d94a2d87d928d8fdf943a8d260386471e06b03c635acc6"))
+	//(104581, uint256("0x0000000001040e54fab7cb94317cade9461c6500c77a492ba1afd4d04949861b"))
+	//(127770, uint256("0x000000000053c7733ed070490012321680e21557bb309ebc0e52265326ffbd0d"))
+	//(130116, uint256("0x000000000059038c0121e8c503ba86ca6233b25f0ab1c4836be94d5e1bc79db9"))
+	//(152989, uint256("0x0000000000a34969026f2d3e05aa2e8464581107530d8c40ea353dc4244d3161"))
+	//(212169, uint256("0x00000000005f7efd88cc09dd9de600150868a75e27a4cb363801e79e5dda4d6d"));
 	
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1520885528, // * UNIX timestamp of last checkpoint block
-    259234,    // * total number of transactions between genesis and last checkpoint
+    1521897471, // * UNIX timestamp of last checkpoint block
+    0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    14400        // * estimated number of transactions per day after checkpoint
+    1        // * estimated number of transactions per day after checkpoint
 };
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1740710,
+    1521897471,
     0,
     250};
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1454124731,
+    1521897471,
     0,
     100};
 
@@ -157,20 +157,20 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x6dc72347960a03749d1472575b9cb25a3b1a8953773aa1375417f38454f6062d"));
  	
 		
-        vSeeds.push_back(CDNSSeedData("cognitionode.dyndns.org", "cognitionode.dyndns.org"));
-		vSeeds.push_back(CDNSSeedData("cognitionode1.dyndns.org", "cognitionode1.dyndns.org"));
-		vSeeds.push_back(CDNSSeedData("cognitionode2.dyndns.org", "cognitionode2.dyndns.org"));
-		vSeeds.push_back(CDNSSeedData("cognitionode3.dyndns.org", "cognitionode3.dyndns.org"));
-		vSeeds.push_back(CDNSSeedData("cognitionode4.dyndns.org", "cognitionode4.dyndns.org"));
-		vSeeds.push_back(CDNSSeedData("cognitionode5.dyndns.org", "cognitionode5.dyndns.org"));
-		vSeeds.push_back(CDNSSeedData("cognitionode6.dyndns.org", "cognitionode6.dyndns.org"));
+        vSeeds.push_back(CDNSSeedData("208.113.132.65", "208.113.167.221"));
+		//vSeeds.push_back(CDNSSeedData("cognitionode1.dyndns.org", "cognitionode1.dyndns.org"));
+		//vSeeds.push_back(CDNSSeedData("cognitionode2.dyndns.org", "cognitionode2.dyndns.org"));
+		//vSeeds.push_back(CDNSSeedData("cognitionode3.dyndns.org", "cognitionode3.dyndns.org"));
+		//vSeeds.push_back(CDNSSeedData("cognitionode4.dyndns.org", "cognitionode4.dyndns.org"));
+		//vSeeds.push_back(CDNSSeedData("cognitionode5.dyndns.org", "cognitionode5.dyndns.org"));
+		//vSeeds.push_back(CDNSSeedData("cognitionode6.dyndns.org", "cognitionode6.dyndns.org"));
 		
-		vSeeds.push_back(CDNSSeedData("node1.cognitiocoin.com", "node1.cognitiocoin.com"));
-		vSeeds.push_back(CDNSSeedData("node2.cognitiocoin.com", "node2.cognitiocoin.com"));
-		vSeeds.push_back(CDNSSeedData("node3.cognitiocoin.com", "node3.cognitiocoin.com"));
-		vSeeds.push_back(CDNSSeedData("node4.cognitiocoin.com", "node4.cognitiocoin.com"));
-		vSeeds.push_back(CDNSSeedData("node5.cognitiocoin.com", "node5.cognitiocoin.com"));
-		vSeeds.push_back(CDNSSeedData("node6.cognitiocoin.com", "node6.cognitiocoin.com"));
+		//vSeeds.push_back(CDNSSeedData("node1.cognitiocoin.com", "node1.cognitiocoin.com"));
+		//vSeeds.push_back(CDNSSeedData("node2.cognitiocoin.com", "node2.cognitiocoin.com"));
+		//vSeeds.push_back(CDNSSeedData("node3.cognitiocoin.com", "node3.cognitiocoin.com"));
+		//vSeeds.push_back(CDNSSeedData("node4.cognitiocoin.com", "node4.cognitiocoin.com"));
+		//vSeeds.push_back(CDNSSeedData("node5.cognitiocoin.com", "node5.cognitiocoin.com"));
+		//vSeeds.push_back(CDNSSeedData("node6.cognitiocoin.com", "node6.cognitiocoin.com"));
 
 		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 88);
@@ -249,10 +249,10 @@ public:
         //assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cognitio-testnet.seed.fuzzbawls.pw"));
-        vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cognitio-testnet.seed2.fuzzbawls.pw"));
-        vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net"));
-        vSeeds.push_back(CDNSSeedData("88.198.192.110", "88.198.192.110"));
+       // vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cognitio-testnet.seed.fuzzbawls.pw"));
+       // vSeeds.push_back(CDNSSeedData("fuzzbawls.pw", "cognitio-testnet.seed2.fuzzbawls.pw"));
+      //  vSeeds.push_back(CDNSSeedData("s3v3nh4cks.ddns.net", "s3v3nh4cks.ddns.net"));
+     //   vSeeds.push_back(CDNSSeedData("88.198.192.110", "88.198.192.110"));
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet cognitio addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet cognitio script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
