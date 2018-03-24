@@ -19,6 +19,8 @@ struct SeedSpec6 {
     uint16_t port;
 };
 #include "chainparamsseeds.h"
+
+
 /**
  * Main network
  */
@@ -45,7 +47,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-	(0, uint256("0x00000c393bf1eaf9757be560092cc08a7b1ff0345e874b12521522e27862d7d7"))
+	(0, uint256("0x000000da0be423abd192d2f261afbedec2c81f4e11ecc04803c730c30b305c27"))
 	(2, uint256("0x00000310d966793ec3dd080a97b10afa0c848432c01b4053d2c6f206e1449e28"))
 	(1479, uint256("0x00000000071b53f74e2f55ffa657cf1fc39807fb584e797ed0c6b22a4527d51c"))
 	(5000, uint256("0x0000000002afc607345f345261bf9713c7a9cf8d50191cb338250bd4be0090b5"))
@@ -108,10 +110,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x02;
-        pchMessageStart[1] = 0x21;
-        pchMessageStart[2] = 0x01;
-        pchMessageStart[3] = 0xa1;
+        pchMessageStart[0] = 0x04;
+        pchMessageStart[1] = 0x08;
+        pchMessageStart[2] = 0x08;
+        pchMessageStart[3] = 0x04;
         vAlertPubKey = ParseHex("045da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d");
         nDefaultPort = 60020;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Cognitio starting difficulty is 1 / 2^12
@@ -128,9 +130,9 @@ public:
 		
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nZerocoinStartTime = 1524060000; // Wednesday 18 April 2018 14:00:00 UTC
-		nZerocoinStartHeight = 259300;
+	nZerocoinStartHeight = 259300;
 		
-		const char* pszTimestamp = "Cognitio 30-09-2017";
+	const char* pszTimestamp ="22/03/2018 New bill would prepare US for artificial intelligence threat - defensenews.com";
 		
         CMutableTransaction txNew;
         txNew.vin.resize(1);
@@ -138,18 +140,22 @@ public:
 				
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("045da9271f5d9df405d9e83c7c7e62e9c831cc85c51ffaa6b515c4f9c845dec4bf256460003f26ba9d394a17cb57e6759fe231eca75b801c20bccd19cbe4b7942d") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
-        genesis.nVersion = 1;
-        genesis.nTime = 1506779239;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 500317;
-        hashGenesisBlock = genesis.GetHash();
+        genesis.nVersion = 1;		  
+        genesis.nTime    = 1521897471;
+        genesis.nBits    = 0x1e0ffff0;
+        genesis.nNonce   = 1932660;
 		
-        assert(hashGenesisBlock == uint256("0x00000c393bf1eaf9757be560092cc08a7b1ff0345e874b12521522e27862d7d7"));
-        assert(genesis.hashMerkleRoot == uint256("0xa84934befc603b6dc91cd53895bf45cd056b4e7a9562067d7608b94e8704815d"));
+        hashGenesisBlock = genesis.GetHash();
+	
+        
+
+      	 assert(hashGenesisBlock == uint256("0x000000da0be423abd192d2f261afbedec2c81f4e11ecc04803c730c30b305c27"));
+        assert(genesis.hashMerkleRoot == uint256("0x6dc72347960a03749d1472575b9cb25a3b1a8953773aa1375417f38454f6062d"));
+ 	
 		
         vSeeds.push_back(CDNSSeedData("cognitionode.dyndns.org", "cognitionode.dyndns.org"));
 		vSeeds.push_back(CDNSSeedData("cognitionode1.dyndns.org", "cognitionode1.dyndns.org"));
@@ -167,20 +173,20 @@ public:
 		vSeeds.push_back(CDNSSeedData("node6.cognitiocoin.com", "node6.cognitiocoin.com"));
 
 		
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 88);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 11);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 173);
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x07)(0xD4)(0xF9)(0x7C).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x07)(0x7D)(0xA5)(0x34).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is 'TBD'
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x00)(0x00)(0x00)(0x99).convert_to_container<std::vector<unsigned char> >();
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
         fRequireRPCPassword = true;
         fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
@@ -384,3 +390,6 @@ bool SelectParamsFromCommandLine()
     SelectParams(network);
     return true;
 }
+
+
+
