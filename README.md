@@ -1,5 +1,5 @@
 <h2><strong>Cognitio Staging Repository (Version 2.5.0)</strong></h2>
-<p>More information at cognitio.com Visit our ANN thread at https://bitcointalk.org/index.php?topic=1831629</p>
+<p>More information at cognitio.com </p>
 <h3><strong>Coin specs:</strong></h3>
 <p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
 <ul>
