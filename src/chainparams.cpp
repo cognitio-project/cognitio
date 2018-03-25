@@ -47,7 +47,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-	(0, uint256("0x000000da0be423abd192d2f261afbedec2c81f4e11ecc04803c730c30b305c27"))
+	(0, uint256("0x000000da0be423abd192d2f261afbedec2c81f4e11ecc04803c730c30b305c27"));
 	//(2, uint256("0x00000310d966793ec3dd080a97b10afa0c848432c01b4053d2c6f206e1449e28"))
 	//(1479, uint256("0x00000000071b53f74e2f55ffa657cf1fc39807fb584e797ed0c6b22a4527d51c"))
 	//(5000, uint256("0x0000000002afc607345f345261bf9713c7a9cf8d50191cb338250bd4be0090b5"))
@@ -158,20 +158,7 @@ public:
  	
 		
         vSeeds.push_back(CDNSSeedData("208.113.132.65", "208.113.167.221"));
-		//vSeeds.push_back(CDNSSeedData("cognitionode1.dyndns.org", "cognitionode1.dyndns.org"));
-		//vSeeds.push_back(CDNSSeedData("cognitionode2.dyndns.org", "cognitionode2.dyndns.org"));
-		//vSeeds.push_back(CDNSSeedData("cognitionode3.dyndns.org", "cognitionode3.dyndns.org"));
-		//vSeeds.push_back(CDNSSeedData("cognitionode4.dyndns.org", "cognitionode4.dyndns.org"));
-		//vSeeds.push_back(CDNSSeedData("cognitionode5.dyndns.org", "cognitionode5.dyndns.org"));
-		//vSeeds.push_back(CDNSSeedData("cognitionode6.dyndns.org", "cognitionode6.dyndns.org"));
 		
-		//vSeeds.push_back(CDNSSeedData("node1.cognitiocoin.com", "node1.cognitiocoin.com"));
-		//vSeeds.push_back(CDNSSeedData("node2.cognitiocoin.com", "node2.cognitiocoin.com"));
-		//vSeeds.push_back(CDNSSeedData("node3.cognitiocoin.com", "node3.cognitiocoin.com"));
-		//vSeeds.push_back(CDNSSeedData("node4.cognitiocoin.com", "node4.cognitiocoin.com"));
-		//vSeeds.push_back(CDNSSeedData("node5.cognitiocoin.com", "node5.cognitiocoin.com"));
-		//vSeeds.push_back(CDNSSeedData("node6.cognitiocoin.com", "node6.cognitiocoin.com"));
-
 		
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 88);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 11);
@@ -347,7 +334,7 @@ public:
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
         // UnitTest share the same checkpoints as MAIN
-        return data;
+       // return data;
     }
     //! Published setters to allow changing values in unit test cases
     virtual void setSubsidyHalvingInterval(int anSubsidyHalvingInterval) { nSubsidyHalvingInterval = anSubsidyHalvingInterval; }
