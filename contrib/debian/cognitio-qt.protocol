@@ -1,6 +1,6 @@
 [Protocol]
-exec=solaris-qt '%u'
-protocol=solaris
+exec=cognitio-qt '%u'
+protocol=cognitio
 input=none
 output=none
 helper=true

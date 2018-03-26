@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Cognitio
+Comment=Cognitio P2P Cryptocurrency
+Comment[fr]=Cognitio, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Cognitio, eşten eşe kriptografik sanal para birimi
+Exec=cognitio-qt %u
+Terminal=false
+Type=Application
+Icon=cognitio128
+MimeType=x-scheme-handler/cognitio;
+Categories=Office;Finance;

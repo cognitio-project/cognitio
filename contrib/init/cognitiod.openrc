@@ -2,24 +2,24 @@
 
 # backward compatibility for existing gentoo layout
 #
-if [ -d "/var/lib/solaris/.solaris" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/solaris/.solaris"
+if [ -d "/var/lib/cognitio/.cognitio" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/cognitio/.cognitio"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/solarisd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/cognitiod"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/solaris/solaris.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/solarisd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/solarisd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/cognitio/cognitio.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/cognitiod}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/cognitiod.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-solaris}
-BITCOIND_GROUP=${BITCOIND_GROUP:-solaris}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/solarisd}
+BITCOIND_USER=${BITCOIND_USER:-cognitio}
+BITCOIND_GROUP=${BITCOIND_GROUP:-cognitio}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/cognitiod}
 
-name="Solaris Core Daemon"
-description="Solaris crypto-currency p2p network daemon"
+name="Cognitio Core Daemon"
+description="Cognitio crypto-currency p2p network daemon"
 
-command="/usr/bin/solarisd"
+command="/usr/bin/cognitiod"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -65,7 +65,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run solarisd."
+		eerror "ERROR: You must set a secure rpcpassword to run cognitiod."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -78,7 +78,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Solaris Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Cognitio Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

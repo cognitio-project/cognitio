@@ -1,9 +1,9 @@
-<h2><strong>Cognitio Staging Repository (Version 2.5.0)</strong></h2>
+<h2><strong>Cognitio Staging Repository (Version 0.01)</strong></h2>
 <p>More information at cognitio.com </p>
 <h3><strong>Coin specs:</strong></h3>
 <p><strong><span style="color: #800080;"><em>Algo:</em></span></strong></p>
 <ul>
-<li>Xevan</li>
+<li>XEVAN</li>
 </ul>
 <p><strong><span style="color: #800080;"><em>PoW Block Reward:</em></span></strong></p>
 <ul>
