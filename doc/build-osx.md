@@ -38,7 +38,7 @@ Instructions: Homebrew
 
 #### Install dependencies using Homebrew
 
-        brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 libzmq
+        brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 zmq
 
 ### Building `cognitiod`
 
@@ -51,6 +51,15 @@ Instructions: Homebrew
 
         ./autogen.sh
         ./configure --with-gui=qt5
+        
+        In High Sierra, OpenSSL implmentations have been changed to LibreSSL which results in an error if you run ./configure.
+        "configure: error: Detected LibreSSL: This is NOT supported, and may break consensus compatibility!"
+        
+      
+        To fix this, make sure you have openssl installed (should be if you ran the above dependencies install) and run ./config like this:
+        ./configure LDFLAGS='-L/usr/local/opt/openssl/lib' CPPFLAGS='-I/usr/local/opt/openssl/include' PKG_CONFIG_PATH='/usr/local/opt/openssl/lib/pkgconfig' --with-gui=qt5
+        
+        
         make
 
 3.  It is also a good idea to build and run the unit tests:
