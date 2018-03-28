@@ -52,6 +52,8 @@ Instructions: Homebrew
         ./autogen.sh
         ./configure --with-gui=qt5
         
+        
+        FOR LATER VERSIONS OF OSX
         In High Sierra, OpenSSL implmentations have been changed to LibreSSL which results in an error if you run ./configure.
         "configure: error: Detected LibreSSL: This is NOT supported, and may break consensus compatibility!"
         
@@ -61,17 +63,21 @@ Instructions: Homebrew
         ./configure LDFLAGS='-L/usr/local/opt/openssl/lib' CPPFLAGS='-I/usr/local/opt/openssl/include' PKG_CONFIG_PATH='/usr/local/opt/openssl/lib/pkgconfig' --with-gui=qt5
         
         
-        make
+        When you successfully run .configure at the end it will display the options turned on as well as the compiler information (clang)
+        For some reason Boost 1.66 will result in errors (Undefined symbols for architecture x86_64:)
+        so install a version of Boost pre-1.66
         
-        If you get this error:
-        rpcserver.cpp:528:48: error: too many template arguments for class template
-          'basic_socket_acceptor'
-        ...basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor
-        
-        You either need to install Boost or your Boost version is wrong - for some reason Boost 1.66 doesn't work.
+        A crude way of doing this is:
+    
         Use an pre-1.66 version:
        
         brew link --overwrite boost@1.57 --force
+        go to usr/Cellar/
+        open boost folder with 1.66, delete it
+        move boost@1.olderversion to boost
+        
+        
+        make
         
         
         
