@@ -57,10 +57,24 @@ Instructions: Homebrew
         
       
         To fix this, make sure you have openssl installed (should be if you ran the above dependencies install) and run ./config like this:
+        
         ./configure LDFLAGS='-L/usr/local/opt/openssl/lib' CPPFLAGS='-I/usr/local/opt/openssl/include' PKG_CONFIG_PATH='/usr/local/opt/openssl/lib/pkgconfig' --with-gui=qt5
         
         
         make
+        
+        If you get this error:
+        rpcserver.cpp:528:48: error: too many template arguments for class template
+          'basic_socket_acceptor'
+        ...basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor
+        
+        You either need to install Boost or your Boost version is wrong - for some reason Boost 1.66 doesn't work.
+        Use an pre-1.66 version:
+       
+        brew link --overwrite boost@1.57 --force
+        
+        
+        
 
 3.  It is also a good idea to build and run the unit tests:
 
